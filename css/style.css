@@ -149,7 +149,7 @@ a {
         display: none;
     }
 }
-/*============== HERO SECTION FONTS ==================*/
+/*============== HERO SECTION ==================*/
 .hero {
     height: 100vh;
     display: flex;
@@ -176,14 +176,15 @@ a {
 }
 .title {
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1rem;
 }
 .title span {
+    color: #ac1313;
+    font-size: 1.2em;
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
-    font-size: 1.2em;
 }   
 .title__desc {
     font-size: 1rem;
@@ -273,5 +274,86 @@ a {
     }
     .btn__solid {
         font-size: 0.65rem;
+    }
+}
+/*============== CETEGORIES SECTION ==================*/
+.cetegories {
+    padding: 7rem 0;
+}
+.section__header {
+    text-align: center;
+    margin-bottom: 3.1rem;
+}
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.cetegories__items {
+    justify-content: space-around;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+.cetegory__item {
+    width: 240px;
+    height: 240px;
+    background-color: #ebb96a;
+    border: 30px solid rgba(50, 50, 93, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.item:nth-child(2) .cetegory__item{
+    background-color: #f05b10;
+}
+.item:nth-child(3) .cetegory__item{
+    background-color: rgb(172, 19, 19);
+}
+.cetegory__item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.75rem;
+}
+.cetegory__item figcaption span {
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.cetegories__info {
+    gap: 3rem;
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.cetegories__info p {
+    color: #575757;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+@media screen and (max-width:992px) {
+    .cetegory__item {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:768px) {
+    .cetegory__item {
+        width: 240px;
+        height: 240px;
+    }
+    .cetegories__items {
+        flex-direction: column;
+    }
+    .cetegories__info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .info__box {
+        width: 90%;
     }
 }

@@ -8,3 +8,7 @@ navToggle.addEventListener('click', function() {
     const linksContainerHeight = linksContainer.getBoundingClientRect().height;
     linksContainerHeight === 0 ? linksContainer.style.height = `${linksHeight}px` : linksContainer.style.height = 0;
 });
+
+const header = document.querySelector('.header');
+const nav = document.querySelector('.nav');
+const navHeight = nav.getBoundingClientRect();
