@@ -1,3 +1,6 @@
+/*============== GOOGLE FONTS =======================*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,7 +11,8 @@
 body {
     color: #313131;
     background-color: #FFF;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 img {
     width: 100%;
@@ -23,4 +27,125 @@ a {
 .container {
     width: 90%;
     margin: auto;
+}
+/* HEADER */
+.header {
+    background-color: #FFF;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    position: absolute;
+    width: 100%;
+    padding: 1.2rem 0;
+    background-color: #FFF;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+}
+.nav__fixed {
+    position: fixed;
+    width: 100%;
+    padding: 1.2rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.logo {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    display: block;
+}
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.nav__link {
+    color: #313131;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.nav__link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.15em;
+    background-color: #313131;
+    bottom: -0.375rem;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all 400ms ease ;
+}
+.nav__link:hover{
+    color: #464646;
+}
+.nav__link:hover.nav__link::before{
+    transform: scaleX(1);
+}
+.nav__toggle {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+}
+.nav__toggle span,
+.nav__toggle span::before,
+.nav__toggle span::after {
+    display: block;
+    width: 1.75rem;
+    height: 0.125rem;
+    background-color: black;
+    position: relative;
+}
+.nav__toggle span::before,
+.nav__toggle span::after {
+    content: '';
+}
+.nav__toggle span::before {
+    position: absolute;
+    top: -0.5rem;
+   
+}
+.nav__toggle span::after {
+    position: absolute;
+    bottom: -0.5rem;
+}
+@media screen and (max-width:768px) {
+    .nav__toggle {
+        display: flex;
+    }
+    .nav__links-container {
+        position: absolute;
+        background-color: #FFF;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 400ms ease;
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+    }
+    .nav__links {
+        all: unset;
+        list-style: none;
+    }
+    .nav__links li{
+        border-top: 1px solid #313131;
+    }
+    .nav__link{
+        display: block;
+        padding: 1.5rem 2rem;
+    }
+    .nav__link::before {
+        display: none;
+    }
 }
