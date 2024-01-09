@@ -11,4 +11,16 @@ navToggle.addEventListener('click', function() {
 
 const header = document.querySelector('.header');
 const nav = document.querySelector('.nav');
-const navHeight = nav.getBoundingClientRect();
+const navHeight = nav.getBoundingClientRect().height;
+// STICKY NAVIGATION BAR
+const stickyNav = function(entries) {
+    const [entry] = entries;
+    if(!entry.isIntersecting) nav.classList.add('nav__fixed')
+    else nav.classList.remove('nav__fixed')
+}
+const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`
+})
+headerObserver.observe(header)
