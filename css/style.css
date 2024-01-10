@@ -519,3 +519,71 @@ h4 {
         grid-template-columns: 1fr;
     }
 }
+/*============== CTA SECTION ==================*/
+.cta {
+    background: #F1F1F1;
+    background: url(../images/cta-bg.jpeg);
+    background-size:cover;
+    padding: 150px 0;
+}
+.cta__wrapper {
+    width: 50%;
+}
+.cta__wrapper h2 {
+    margin-bottom: 1rem;
+}
+.cta__wrapper p {
+    margin-bottom: 2rem;
+}
+@media screen and (max-width:768px) {
+    .cta {
+        background-position: center;
+    }
+    .cta__wrapper {
+        width: 100%;
+        padding-right: 2rem;
+    }
+} 
+/*============== NEWSLETTER SECTION ==================*/
+.news {
+    padding: 7.5rem 0;
+}
+form {
+    text-align: center;
+}
+.input__wrapper {
+    display: block;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.input__subscribe {
+    display: inline-block;
+    width: 64%;
+    height: 45px;
+    margin-right: 2px;
+    padding-left: 40px;
+    border: none;
+    border-style: solid;
+    border-color: #ebebeb;
+    background-color: hsla(0, 0%, 85.9%, 0.1);
+    color: #6c6c6c;
+    font-size: 13px;
+    outline: none;
+}
+.subscribe__btn {
+    display: inline-block;
+    width: 35%;
+    height: 45px;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    background-color: #000;
+    transition: all 400ms ease;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+}
