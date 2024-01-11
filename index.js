@@ -1,4 +1,4 @@
-const collection = [
+const items = [
     {
         id: 1,
         title:'Blue Plate',
@@ -152,22 +152,26 @@ headerObserver.observe(header);
 
 // DISPLAY COLLECTION ITEM (BOXES)
 
+const newItems = items.slice(7, 13);
 const boxContainer = document.querySelector('.boxes');
+const itemsContainer = document.querySelector('.items');
+
 
 window.addEventListener('DOMContentLoaded', function() {
-    displayCollectionItems(collection)
+    displayCollectionItems(newItems)
+    displayItems(items)
 })
 function displayCollectionItems(collectionItems) {
-    let collDisplay = collectionItems.map(function(collection) {
-        // console.log(collection);
+    let collDisplay = collectionItems.map(function(newItems) {
+        // console.log(newItems);
         return `
         <div class="grid__item box">
             <div class="box__img">
-                <img src="${collection.img}" alt="${collection.title}">
+                <img src="${newItems.img}" alt="${newItems.title}">
             </div>
             <div class="box__content">
-                <a href="#" class="item__title">${collection.title}</a>
-                <span class="itme__price">&dollar; ${collection.price} USD</span>
+                <a href="#" class="item__title">${newItems.title}</a>
+                <span class="itme__price">&dollar; ${newItems.price} USD</span>
             </div>
         </div>
         `
@@ -175,3 +179,20 @@ function displayCollectionItems(collectionItems) {
     collDisplay = collDisplay.join('');
     boxContainer.innerHTML = collDisplay;
 }
+function displayItems(i) {
+    let itemDisplay = items.map(function(items) {
+        return `
+        <div class="grid__item box">
+            <div class="box__img">
+                <img src="${items.img}" alt="${items.title}">
+            </div>
+            <div class="box__content">
+                <a href="#" class="item__title">${items.title}</a>
+                <span class="itme__price">&dollar; ${items.price} USD</span>
+            </div>
+        </div>
+        `
+    });
+    itemDisplay= itemDisplay.join('');
+    itemsContainer.innerHTML = itemDisplay;
+};
