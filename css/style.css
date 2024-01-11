@@ -146,19 +146,35 @@ p {
     margin-bottom: 1rem;
 }
 /*button*/
-.btn__solid {
+.btn {
     display: inline-block;
     color: var(--clr-white);
     font-size: 0.875rem;
     font-weight: var(--font-weight--400);
+    letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
-    margin-right: 0px;
-    padding: 1.75em 2.8em;
     background-color: var(--clr-red);
     transition: var(--transition);
 }
-.btn__solid:hover {
+.btn__solid {
+    padding: 1.75em 2.8em;
+}
+.subscribe__btn {
+    width: 35%;
+    height: 45px;
+    padding: 0 35px;
+    border: none;
+    outline: none;
     background-color: var(--clr-black);
+    text-align: center;
+}
+.btn:hover{
+    background-color: var(--clr-black);
+}
+.subscribe__btn:hover {
+    background-color: var(--clr-red);
+}
+.btn__solid:hover {
     transform: translateY(-5px);
 }
 @media screen and (max-width:992px) {
@@ -295,6 +311,9 @@ p {
     height: 100vh;
     overflow: hidden;
 }
+.hero .wrapper {
+    justify-content: flex-start;
+}
 .hero__content,
 .hero__showcase {
     width: 50%;
@@ -306,7 +325,7 @@ p {
     font-weight: var(--font-weight--500);
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.8rem;
 } 
 .title__desc {
     font-size: 1rem;
@@ -549,10 +568,8 @@ p {
 .grid__item:hover .box__img::before {
     display: block;
 }
-.collection .btn__solid {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.btn__container {
+    text-align: center;
 }
 
 @media screen and (max-width:992px) {
@@ -612,21 +629,18 @@ form {
     font-size: 0.9rem;
     outline: none;
 }
-.subscribe__btn {
-    display: inline-block;
-    width: 35%;
-    height: 45px;
-    padding: 0 35px;
-    border: none;
-    outline: none;
-    background-color: var(--clr-black);
-    transition: var(--transition);
-    color: var(--clr-white);
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 1px;
-}
 
+@media screen and (max-width:768px) {
+    .input__wrapper {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .subscribe__btn,
+    .input__subscribe {
+        width: 100%;
+    }
+}
 /*============== FOOTER SECTION ==================*/
 #footer {
     padding: 5rem 0;
